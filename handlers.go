@@ -44,6 +44,7 @@ func CarbsOne(w http.ResponseWriter, r *http.Request) {
 
 	if float64(resp.StatusCode)/200 > 1.495 {
 		http.Error(w, "Could not connect to Nutrient DB", http.StatusInternalServerError)
+		return
 	}
 
 	var n NutrientAPIResponse
