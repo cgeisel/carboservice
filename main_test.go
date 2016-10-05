@@ -3,5 +3,5 @@ package main
 import "testing"
 
 func TestReverse(t *testing.T) {
-	return
+	t.Error("Fake error!")
 }
