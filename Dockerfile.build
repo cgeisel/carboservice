@@ -1,5 +1,5 @@
 FROM golang
-COPY *.go /go/src/github.com/cgeisel/carboservice
+COPY *.go /go/src/github.com/cgeisel/carboservice/
 RUN go get github.com/gorilla/mux
 RUN GOOS=linux GOARCH=amd64 go build -o ./carboservice ./src/github.com/cgeisel/carboservice/
 CMD ["/bin/bash"]
