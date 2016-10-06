@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestReverse(t *testing.T) {
+func TestMain(t *testing.T) {
 	//t.Error("Fake error!")
 	return
 }
