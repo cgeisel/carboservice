@@ -16,17 +16,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 // CarbsIndex handle requests to "/carbs"
 func CarbsIndex(w http.ResponseWriter, r *http.Request) {
-	carbs := Carbs{
-		Carb{Name: "Write carboservice"},
-		Carb{Name: "Read about CodePipeline"},
-	}
-
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.WriteHeader(http.StatusOK)
-
-	if err := json.NewEncoder(w).Encode(carbs); err != nil {
-		panic(err)
-	}
+	fmt.Fprintf(w, "Usage: GET /carbs/:id for nutrition info")
 }
 
 // CarbsOne handle requests to "/carbs/:id"
