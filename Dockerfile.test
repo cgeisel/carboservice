@@ -1,0 +1,6 @@
+FROM golang
+COPY *.go /go/src/github.com/cgeisel/carboservice/
+RUN go get github.com/gorilla/mux
+WORKDIR /go/src/github.com/cgeisel/carboservice/
+RUN go test
+CMD ["/bin/bash"]
