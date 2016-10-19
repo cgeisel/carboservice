@@ -11,5 +11,6 @@ var nutrientURL = "http://api.nal.usda.gov/ndb/reports/?type=b&format=json&api_k
 func main() {
 	router := NewRouter()
 
+	log.Println("starting carboservice on port 8080")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
