@@ -1,6 +1,5 @@
 FROM golang
 COPY *.go /go/src/github.com/cgeisel/carboservice/
 RUN go get github.com/gorilla/mux
-#RUN GOOS=linux GOARCH=amd64 go build -o ./carboservice ./src/github.com/cgeisel/carboservice/
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s" -a -installsuffix cgo -o ./carboservice ./src/github.com/cgeisel/carboservice/
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s" -a -installsuffix cgo -o ./carboservice ./src/github.com/cgeisel/carboservice/
 CMD ["/bin/bash"]
