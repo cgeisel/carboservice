@@ -21,7 +21,7 @@
                     }
                 ],
                 "entryPoint": [],
-                "memory": 300,
+                "memory": 200,
                 "command": [],
                 "cpu": 10,
                 "volumesFrom": []
