@@ -11,7 +11,7 @@ import (
 
 // Index handle requests to "/"
 func Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello World!")
+	fmt.Fprintf(w, "Hello Friends!")
 }
 
 // CarbsIndex handle requests to "/carbs"
